@@ -1,11 +1,10 @@
-# sos_expo_app
-# Welcome to my app - Grow and Mature
+# Learning App
 
 # These are steps to install my app
 ## Step 1: Clone my source code
-- `git clone https://github.com/akiyamahaa/sos_expo_app.git`
+- `git clone https://github.com/akiyamahaa/expo-learningApp.git`
 ## Step 2: Access the project directory
-- `cd sos_expo_app/`
+- `cd expo-learningApp`
 ## Step 3: Install dependencies
 - `yarn install`
 ## Step 4: Run App

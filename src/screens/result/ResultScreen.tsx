@@ -4,30 +4,50 @@ import { RootStackProps } from 'navigation/RootStack';
 import React, { useEffect, useState } from 'react';
 import { ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import color from 'utils/color';
-import { evaluateSentence, answer_topic } from 'utils/mockup_data';
+import bai1 from 'utils/data/qbai1';
+import bai2 from 'utils/data/qbai2';
+import bai3 from 'utils/data/qbai3';
+import bai4 from 'utils/data/qbai4';
+import bai5 from 'utils/data/qbai5';
+import bai6 from 'utils/data/qbai6';
+import { evaluateSentence } from 'utils/mockup_data';
+
+const qbaihoc: any = {
+  bai1,
+  bai2,
+  bai3,
+  bai4,
+  bai5,
+  bai6,
+};
 
 const ResultScreen = () => {
   const route = useRoute();
   const navigation = useNavigation<RootStackProps['navigation']>();
   const { params }: any = route;
-  const [result, setResult] = useState('');
-  const [point, setPoint] = useState(0);
+  // Ques Arr
+  const detail_data = qbaihoc[params.file];
+  // Choose Dict
+  const chose_result = params.resultObj;
 
-  useEffect(() => {
-    if (params.id) {
-      const answer = answer_topic[params.id];
-      const mark = answer.reduce((total, currResult, currIndex) => {
-        const index = currIndex + 1;
-        if (params.resultObj[index] == currResult) {
-          return total + 1;
-        }
-        return total;
-      }, 0);
-      setPoint(mark);
-      const evaluateList = evaluateSentence(mark);
-      setResult(evaluateList[Math.floor(Math.random() * evaluateList.length)]);
-    }
-  }, []);
+  const result_arr = detail_data.map((item: any) => item.answer);
+  const mark = result_arr.reduce(
+    (total: any, currResult: any, currIndex: any) => {
+      const index = currIndex + 1;
+      if (chose_result[index] == currResult) {
+        return total + 1;
+      }
+      return total;
+    },
+    0
+  );
+  const evaluateList = evaluateSentence(mark);
+
+  const [result] = useState(
+    evaluateList[Math.floor(Math.random() * evaluateList.length)]
+  );
+  const [point] = useState(mark);
+
   return (
     <Box style={styles.root}>
       <ImageBackground
@@ -41,10 +61,12 @@ const ResultScreen = () => {
           alt="logo"
         />
         <Box mt="5" width="90%">
-          <Text fontSize={24} bold textAlign="center" mb="4">
-            Bạn đúng {point}/10 câu nè!
+          <Text fontSize={24} bold textAlign="center" mb="4" color="#fff">
+            Bạn đúng {point}/4 câu nè!
           </Text>
-          <Text fontSize={20}>{result}</Text>
+          <Text fontSize={20} color="#fff">
+            {result}
+          </Text>
         </Box>
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
           <Box style={styles.btnStyle}>

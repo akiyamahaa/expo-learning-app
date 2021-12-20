@@ -34,6 +34,13 @@ const HomeScreen = (props: Props) => {
               <Text style={styles.textStyle}>Trắc nghiệm</Text>
             </Box>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('PracticeScreen')}
+          >
+            <Box style={styles.btnStyle}>
+              <Text style={styles.textStyle}>Thực hành</Text>
+            </Box>
+          </TouchableOpacity>
         </Box>
       </Box>
     </Box>

@@ -4,6 +4,8 @@ import {
 } from '@react-navigation/native-stack';
 import React from 'react';
 import HomeScreen from 'screens/home/HomeScreen';
+import PracticeDetailScreen from 'screens/practice-detail/PracticeDetailScreen';
+import PracticeScreen from 'screens/practice/PracticeScreen';
 import QuestionScreen from 'screens/question/QuestionScreen';
 import QuizScreen from 'screens/quiz/QuizScreen';
 import ResultScreen from 'screens/result/ResultScreen';
@@ -17,8 +19,10 @@ export type RootStackParamList = {
   TheoryScreen: undefined;
   QuestionScreen: undefined;
   TheoryDetailScreen: { file: any };
-  QuizScreen: { id: number };
-  ResultScreen: { id: number; resultObj: any };
+  QuizScreen: { file: string };
+  ResultScreen: { file: string; resultObj: any };
+  PracticeScreen: undefined;
+  PracticeDetailScreen: { file: string };
 };
 
 export type RootStackProps = NativeStackScreenProps<RootStackParamList>;
@@ -39,7 +43,8 @@ const RootStack = (props: Props) => {
       <Stack.Screen name="TheoryDetailScreen" component={TheoryDetailScreen} />
       <Stack.Screen name="QuizScreen" component={QuizScreen} />
       <Stack.Screen name="ResultScreen" component={ResultScreen} />
-
+      <Stack.Screen name="PracticeScreen" component={PracticeScreen} />
+      <Stack.Screen name="PracticeDetailScreen" component={PracticeDetailScreen} />
     </Stack.Navigator>
   );
 };

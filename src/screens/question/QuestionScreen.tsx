@@ -10,8 +10,8 @@ import { TOPIC } from 'utils/mockup_data';
 const QuestionScreen = () => {
   const navigation = useNavigation<RootStackProps['navigation']>();
 
-  const handleQuizScreen = (quesId: number) => {
-    navigation.navigate('QuizScreen', { id: quesId });
+  const handleQuizScreen = (fileName: string) => {
+    navigation.navigate('QuizScreen', { file: fileName });
   };
   return (
     <Box>
@@ -22,7 +22,10 @@ const QuestionScreen = () => {
       <Header title="Câu hỏi" />
       <ScrollView style={styles.cardContainer}>
         {TOPIC.map((item, index) => (
-          <TouchableOpacity key={item.file} onPress={() => {}}>
+          <TouchableOpacity
+            key={item.file}
+            onPress={() => handleQuizScreen(item.file)}
+          >
             <Box mb="4">
               <TheoryCard index={index + 1} title={item.title} />
             </Box>

@@ -12,6 +12,7 @@ import AppLoading from 'expo-app-loading';
 import { Asset } from 'expo-asset';
 import RootStack from 'navigation/RootStack';
 import HomeScreen from 'screens/home/HomeScreen';
+import { listImages } from 'utils/mockup_data';
 const MyTheme = {
   ...DefaultTheme,
   colors: {
@@ -21,21 +22,6 @@ const MyTheme = {
   },
 };
 
-const listImage = [
-  require('assets/images/bg.png'),
-  require('assets/images/baoluc/concept.png'),
-  require('assets/images/baoluc/formal.png'),
-  require('assets/images/baoluc/harm.png'),
-  require('assets/images/baoluc/prevent.png'),
-  require('assets/images/baoluc/reason.png'),
-  require('assets/images/rubber/signal.png'),
-  require('assets/images/rubber/should.png'),
-  require('assets/images/rubber/should_not.png'),
-  require('assets/images/traffic/concept.png'),
-  require('assets/images/traffic/reason.png'),
-  require('assets/images/traffic/prevent.png'),
-  require('assets/images/traffic/solution.png'),
-];
 
 export default function App() {
   const [isReady, setIsReady] = useState(false);
@@ -45,7 +31,7 @@ export default function App() {
       Font.loadAsync({
         'Chewy-Regular': require('./assets/font/Chewy-Regular.ttf'),
       }),
-      Asset.loadAsync(listImage),
+      Asset.loadAsync(listImages),
     ]);
     setIsReady(true);
   };

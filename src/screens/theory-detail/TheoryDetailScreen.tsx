@@ -17,7 +17,7 @@ const renderImgWithContent = (listData: any) => {
       {listData.map((item: any, index: number) => (
         <Box key={`${item.img}-${index}`} marginY="2">
           <Image
-            source={require('assets/icon.png')}
+            source={item.img}
             alt="lmao"
             style={{ width: '100%', height: 160 }}
           />
@@ -28,8 +28,8 @@ const renderImgWithContent = (listData: any) => {
               key={`${i}-${idx}`}
               my="1"
             >
-              <Icon as={Entypo} name="dot-single" />
-              <Text width="90%" fontSize={20}>
+              <Icon as={Entypo} name="dot-single" color="#fff" />
+              <Text width="90%" fontSize={20} color="#fff">
                 {i}
               </Text>
             </Box>
@@ -69,7 +69,7 @@ const TheoryDetailScreen = (props: any) => {
       <ScrollView style={styles.cardContainer}>
         {/* Module -1 */}
         <Box>
-          <Text bold fontSize={24}>
+          <Text bold fontSize={24} color="#fff">
             1. {partOne.title}
           </Text>
           {partOne.contents.map((item: any) => (
@@ -79,8 +79,8 @@ const TheoryDetailScreen = (props: any) => {
               key={item}
               my="1"
             >
-              <Icon as={Entypo} name="dot-single" />
-              <Text width="90%" fontSize={20}>
+              <Icon as={Entypo} name="dot-single" color="#fff" />
+              <Text width="90%" fontSize={20} color="#fff">
                 {item}
               </Text>
             </Box>
@@ -88,45 +88,22 @@ const TheoryDetailScreen = (props: any) => {
         </Box>
         {/* Module - 2 */}
         <Box>
-          <Text bold fontSize={24}>
+          <Text bold fontSize={24} color="#fff">
             2. {partTwo.title}
           </Text>
           {renderImgWithContent(partTwo.contentWithImg)}
         </Box>
         {/* Module - 3*/}
         <Box>
-          <Text bold fontSize={24}>
+          <Text bold fontSize={24} color="#fff">
             3. {partThree.title}
           </Text>
           {partThree.subcontents.map((content: any, index: number) => (
             <Box key={content.title}>
-              <Text bold fontSize={20}>
+              <Text bold fontSize={20} color="#fff">
                 3.{index + 1}. {content.title}
               </Text>
               {renderImgWithContent(content.contentWithImg)}
-
-              {/* {content.contentWithImg.map((item: any) => (
-                <Box key={item.img}>
-                  <Image
-                    source={require('assets/icon.png')}
-                    alt="lmao"
-                    style={{ width: '100%', height: 160 }}
-                  />
-                  {item.contents.map((i: any) => (
-                    <Box
-                      flexDirection={'row'}
-                      alignItems={'flex-start'}
-                      key={i}
-                    >
-                      <Icon as={Entypo} name="dot-single" />
-                      <Text width="90%" fontSize={20}>
-                        {i}
-                      </Text>
-                    </Box>
-                  ))}
-                </Box>
-              ))} */}
-              {/* {renderImgWithContent(content.contentWithImg)} */}
             </Box>
           ))}
         </Box>

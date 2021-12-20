@@ -10,13 +10,13 @@ export default [
     title: 'Module bài học',
     contentWithImg: [
       {
-        img: 'b3a1',
+        img: require('assets/images/b3a2.png'),
         contents: [
           'Còi chíp (Buzzer) là một loại thiết bị phát thanh. Nó được sử dụng rộng rãi trong đồ chơi điện tử, quà tặng âm thanh, báo thức cá nhân, hệ thống báo động của ngân hàng và công an',
         ],
       },
       {
-        img: 'b3a2',
+        img: require('assets/images/b3a2.png'),
         contents: ['Đây là loại Còi chip loại 9,5x12mm 3V, 5V, 12V'],
       },
     ],
@@ -28,22 +28,22 @@ export default [
         title: 'Các khối lập trình',
         contentWithImg: [
           {
-            img: 'b3a3',
+            img: require('assets/images/b3a3.png'),
             contents: [
               'Điều khiển động cơ',
               'Khi thay đổi thông số M1, M2 và tốc độ thì bánh xe sẽ thay đổi tốc độ và hướng di chuyển',
             ],
           },
           {
-            img: 'b3a4',
+            img: require('assets/images/b3a4.png'),
             contents: ['Xuất ra giá trị cao hoặc thấp tại một chân của robot'],
           },
           {
-            img: 'b3a5',
+            img: require('assets/images/b3a5.png'),
             contents: ['Chờ trong một khoảng thời gian xác định'],
           },
           {
-            img: 'b3a6',
+            img: require('assets/images/b3a6.png'),
             contents: ['Thực hiện lặp các câu lệnh bên trong nó mãi mãi'],
           },
         ],
@@ -52,7 +52,7 @@ export default [
         title: 'Cấu trúc lập trình',
         contentWithImg: [
           {
-            img: 'b3a7',
+            img: require('assets/images/b3a7.png'),
             contents: [
               'Chương trình bắt đầu, kiểm tra kí tự nhận được. Khi nhận được kí tự đã được lập trình sẵn Robot sẽ thực hiện các chức năng',
             ],
@@ -63,7 +63,7 @@ export default [
         title: 'Thực hành',
         contentWithImg: [
           {
-            img: 'b3a8',
+            img: require('assets/images/b3a8.png'),
             contents: [
               'Chân số 3, 4 và 5 điều khiển đèn led',
               'Chân số 6 điều khiển còi chip',

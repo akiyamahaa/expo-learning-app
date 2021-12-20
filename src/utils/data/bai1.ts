@@ -12,13 +12,13 @@ export default [
     title: 'Module bài học',
     contentWithImg: [
       {
-        img: 'b1a1',
+        img: require('assets/images/b1a1.png'),
         contents: [
           'Mô hình robot sử dụng hai động cơ được gắn với chân kế nối M1 và M2',
         ],
       },
       {
-        img: 'b1a2',
+        img: require('assets/images/b1a1.png'),
         contents: [
           'Loại động cơ được sử dụng là động cơ DC giảm tốc V1 (Điện áp hoạt động: 3 - 9 VDC, dòng điện tiêu thụ: 110 - 140 mA)',
         ],
@@ -32,21 +32,21 @@ export default [
         title: 'Các khối lập trình',
         contentWithImg: [
           {
-            img: 'b1a3',
+            img: require('assets/images/b1a3.png'),
             contents: ['Bắt đầu một chương trình'],
           },
           {
-            img: 'b1a4',
+            img: require('assets/images/b1a4.png'),
             contents: [
               'Điều khiển động cơ. Khi thay đổi thông số M1, M2 và tốc độ thì bánh xe sẽ thay đổi tốc độ và hướng di chuyển.',
             ],
           },
           {
-            img: 'b1a5',
+            img: require('assets/images/b1a5.png'),
             contents: ['Chờ trong một khoảng thời gian xác định'],
           },
           {
-            img: 'b1a6',
+            img: require('assets/images/b1a6.png'),
             contents: ['Thực hiện lặp các câu lệnh bên trong nó mãi mãi'],
           },
         ],
@@ -55,7 +55,7 @@ export default [
         title: 'Cấu trúc lập trình',
         contentWithImg: [
           {
-            img: 'b1a7',
+            img: require('assets/images/b1a7.png'),
             contents: [
               'Chương trình sẽ bắt đầu chạy từ câu lệnh đầu tiến lần lượt đến câu lệnh cuối cùng  khi gặp lệnh lặp lại nó sẽ quay trở lại câu lệnh đầu tiên và thực hiện lại từ đầu nếu không chương trình sẽ kết thúc. Lưu đồ trên là cấu trúc của chương trình nó sẽ thực hiện lần lượt 3 khối lệnh A, B, C và khi gặp lệnh lặp lại nó sẽ quay trở lại thực hiện khối lệnh A và nó sẽ lặp đi lặp lại hành động này.',
             ],
@@ -66,7 +66,7 @@ export default [
         title: 'Thực hành',
         contentWithImg: [
           {
-            img: 'b1a8',
+            img: require('assets/images/b1a8.png'),
             contents: [
               'Bắt đầu',
               'Động cơ M1 quay với tốc độ 100',

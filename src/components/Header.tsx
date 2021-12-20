@@ -15,7 +15,7 @@ const Header = (props: any) => {
           <Icon as={Ionicons} name="arrow-back-sharp" size={10} />
         </Box>
       </TouchableOpacity>
-      <Text bold fontSize={28} textTransform="uppercase">
+      <Text bold fontSize={28} textTransform="uppercase" color='#fff'>
         {title}
       </Text>
       <Box style={{ width: 20 }} />

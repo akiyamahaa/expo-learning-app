@@ -11,13 +11,13 @@ export default [
     title: 'Module bài học',
     contentWithImg: [
       {
-        img: 'b5a1',
+        img: require('assets/images/b5a1.png'),
         contents: [
           'Module cảm biến hồng ngoại (dò line) có thể dùng để phát hiện line trắng và đen',
         ],
       },
       {
-        img: 'b5a2',
+        img: require('assets/images/b5a2.png'),
         contents: [
           'Mạch sử dụng cảm biến hồng ngoại TCRT5000 với khoảng cách phát hiện từ 1~25mm. Ứng dụng: dò line, thiết bị phát hiện màu trắng, đen',
         ],
@@ -31,28 +31,28 @@ export default [
         title: 'Các khối lập trình',
         contentWithImg: [
           {
-            img: 'b5a34',
+            img: require('assets/images/b5a4.png'),
             contents: [
               'Điều khiển động cơ M1 hoặc M2',
               'Cài đặt tốc độ truyền dữ liệu từ robot lên máy tính',
             ],
           },
           {
-            img: 'b5a56',
+            img: require('assets/images/b5a56.png'),
             contents: [
               'Gửi dữ liệu từ robot lên máy tính',
               'Đọc giá trị nhận được từ chân Analog',
             ],
           },
           {
-            img: 'b5a78',
+            img: require('assets/images/b5a78.png'),
             contents: [
               'Chờ trong một khoảng thời gian xác định',
               'Thực hiện lặp các câu lệnh bên trong nó mãi mãi',
             ],
           },
           {
-            img: 'b5a91011',
+            img: require('assets/images/b5a91011.png'),
             contents: [
               'Cấu lệnh được dùng trong phép so sánh >, <, =',
               'Khối logic “và”',
@@ -65,7 +65,7 @@ export default [
         title: 'Cấu trúc lập trình',
         contentWithImg: [
           {
-            img: 'b5a12',
+            img: require('assets/images/b5a12.png'),
             contents: [
               'Chương trình bắt đầu, kiểm tra kí tự nhận được. Khi nhận được kí tự đã được lập trình sẵn Robot sẽ thực hiện các chức năng',
             ],
@@ -76,7 +76,7 @@ export default [
         title: 'Thực hành',
         contentWithImg: [
           {
-            img: 'b5a13',
+            img: require('assets/images/b5a13.png'),
             contents: [
               'Chương trình bắt đầu',
               'Nếu chân A7<800 thì robot tiến với tốc độ 200',

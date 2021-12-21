@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   index: {
     width: '20%',
     height: '100%',
-    backgroundColor: color.yellow,
+    backgroundColor: color.light_red,
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
     justifyContent: 'center',

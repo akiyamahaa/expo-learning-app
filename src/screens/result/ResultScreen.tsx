@@ -51,22 +51,20 @@ const ResultScreen = () => {
   return (
     <Box style={styles.root}>
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Box style={styles.logoContainer}>
         <Image
-          source={require('assets/icons/big_logo.png')}
+          source={require('assets/icons/logo.png')}
           style={styles.imageStyle}
           alt="logo"
         />
         <Box mt="5" width="90%">
-          <Text fontSize={24} bold textAlign="center" mb="4" color="#fff">
+          <Text fontSize={24} bold textAlign="center" mb="4">
             Bạn đúng {point}/4 câu nè!
           </Text>
-          <Text fontSize={20} color="#fff">
-            {result}
-          </Text>
+          <Text fontSize={20}>{result}</Text>
         </Box>
         <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
           <Box style={styles.btnStyle}>
@@ -97,7 +95,7 @@ const styles = StyleSheet.create({
     height: 220,
   },
   btnStyle: {
-    backgroundColor: color.yellow,
+    backgroundColor: color.light_red,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

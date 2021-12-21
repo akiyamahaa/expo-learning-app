@@ -45,7 +45,7 @@ const QuizScreen = () => {
   return (
     <Box>
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Header title="Trả lời câu hỏi" />
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   btnStyle: {
-    backgroundColor: color.yellow,
+    backgroundColor: color.light_red,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

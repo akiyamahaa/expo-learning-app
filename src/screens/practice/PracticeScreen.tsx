@@ -16,7 +16,7 @@ const PracticeScreen = () => {
   return (
     <Box>
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Header title="Thực hành" />

@@ -25,7 +25,7 @@ export const TOPIC = [
   },
 ];
 
-export const listImages = [require('assets/images/bg.png')];
+export const listImages = [];
 
 export const evaluateSentence = (mark: number) => {
   if (mark >= 3) {

@@ -12,13 +12,14 @@ const HomeScreen = (props: Props) => {
   return (
     <Box style={styles.root}>
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Box style={styles.logoContainer}>
         <Image
-          source={require('assets/icons/big_logo.png')}
+          source={require('assets/icons/logo.png')}
           style={styles.imageStyle}
+          resizeMode="contain"
           alt="logo"
         />
         <Box mt="5">
@@ -62,11 +63,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   imageStyle: {
-    width: 220,
-    height: 220,
+    height: 120,
+    width: '80%',
   },
   btnStyle: {
-    backgroundColor: color.yellow,
+    backgroundColor: color.light_red,
     borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',

@@ -28,8 +28,8 @@ const renderImgWithContent = (listData: any) => {
               key={`${i}-${idx}`}
               my="1"
             >
-              <Icon as={Entypo} name="dot-single" color="#fff" />
-              <Text width="90%" fontSize={20} color="#fff">
+              <Icon as={Entypo} name="dot-single" />
+              <Text width="90%" fontSize={20}>
                 {i}
               </Text>
             </Box>
@@ -62,14 +62,14 @@ const TheoryDetailScreen = (props: any) => {
   return (
     <Box width="100%">
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Header title={'Nội dung bài học'} />
       <ScrollView style={styles.cardContainer}>
         {/* Module -1 */}
         <Box>
-          <Text bold fontSize={24} color="#fff">
+          <Text bold fontSize={24}>
             1. {partOne.title}
           </Text>
           {partOne.contents.map((item: any) => (
@@ -79,8 +79,8 @@ const TheoryDetailScreen = (props: any) => {
               key={item}
               my="1"
             >
-              <Icon as={Entypo} name="dot-single" color="#fff" />
-              <Text width="90%" fontSize={20} color="#fff">
+              <Icon as={Entypo} name="dot-single" />
+              <Text width="90%" fontSize={20}>
                 {item}
               </Text>
             </Box>
@@ -88,19 +88,19 @@ const TheoryDetailScreen = (props: any) => {
         </Box>
         {/* Module - 2 */}
         <Box>
-          <Text bold fontSize={24} color="#fff">
+          <Text bold fontSize={24}>
             2. {partTwo.title}
           </Text>
           {renderImgWithContent(partTwo.contentWithImg)}
         </Box>
         {/* Module - 3*/}
         <Box>
-          <Text bold fontSize={24} color="#fff">
+          <Text bold fontSize={24}>
             3. {partThree.title}
           </Text>
           {partThree.subcontents.map((content: any, index: number) => (
             <Box key={content.title}>
-              <Text bold fontSize={20} color="#fff">
+              <Text bold fontSize={20}>
                 3.{index + 1}. {content.title}
               </Text>
               {renderImgWithContent(content.contentWithImg)}

@@ -3,7 +3,6 @@ import { Box, Icon, Image, ScrollView, Text } from 'native-base';
 import React, { useEffect, useState } from 'react';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { useRoute } from '@react-navigation/native';
-import { Entypo } from '@expo/vector-icons';
 import bai1 from 'utils/data/tbai1';
 import bai2 from 'utils/data/tbai2';
 import bai3 from 'utils/data/tbai3';
@@ -17,8 +16,8 @@ const renderImgWithContent = (listData: any) => {
       {listData.map((item: any, index: number) => (
         <Box key={`${item.img}-${index}`} marginY="2">
           <Box flexDirection={'row'} alignItems={'flex-start'} my="1">
-            <Text width="100%" fontSize={20} color="#fff">
-              <Text bold fontSize={22} color="#fff">
+            <Text width="100%" fontSize={20} >
+              <Text bold fontSize={22} >
                 Bài {index + 1}:
               </Text>{' '}
               {item.content}
@@ -53,7 +52,7 @@ const PracticeDetailScreen = (props: any) => {
   return (
     <Box width="100%">
       <ImageBackground
-        source={require('assets/images/bg.png')}
+        source={require('assets/icons/bg.png')}
         style={styles.bgStyle}
       />
       <Header title={'Nội dung thực hành'} />

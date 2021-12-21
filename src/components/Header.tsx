@@ -15,7 +15,7 @@ const Header = (props: any) => {
           <Icon as={Ionicons} name="arrow-back-sharp" size={10} />
         </Box>
       </TouchableOpacity>
-      <Text bold fontSize={28} textTransform="uppercase" color='#fff'>
+      <Text bold fontSize={28} textTransform="uppercase">
         {title}
       </Text>
       <Box style={{ width: 20 }} />
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     borderWidth: 1,
-    backgroundColor: color.yellow,
+    backgroundColor: color.light_red,
     marginRight: 12,
     borderRadius: 8,
   },

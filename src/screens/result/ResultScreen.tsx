@@ -58,6 +58,7 @@ const ResultScreen = () => {
         <Image
           source={require('assets/icons/logo.png')}
           style={styles.imageStyle}
+          resizeMode="contain"
           alt="logo"
         />
         <Box mt="5" width="90%">

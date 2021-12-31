@@ -19,7 +19,7 @@ const renderImgWithContent = (listData: any) => {
           <Image
             source={item.img}
             alt="lmao"
-            style={{ width: '100%', height: 160 }}
+            style={{ width: '100%', height: 200, resizeMode:'contain' }}
           />
           {item.contents.map((i: any, idx: number) => (
             <Box

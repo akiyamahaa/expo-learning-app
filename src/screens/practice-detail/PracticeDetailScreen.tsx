@@ -1,6 +1,6 @@
 import Header from 'components/Header';
 import { Box, Icon, Image, ScrollView, Text } from 'native-base';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import bai1 from 'utils/data/tbai1';
@@ -16,8 +16,8 @@ const renderImgWithContent = (listData: any) => {
       {listData.map((item: any, index: number) => (
         <Box key={`${item.img}-${index}`} marginY="2">
           <Box flexDirection={'row'} alignItems={'flex-start'} my="1">
-            <Text width="100%" fontSize={20} >
-              <Text bold fontSize={22} >
+            <Text width="100%" fontSize={20}>
+              <Text bold fontSize={22}>
                 Bài {index + 1}:
               </Text>{' '}
               {item.content}
@@ -26,7 +26,12 @@ const renderImgWithContent = (listData: any) => {
           <Image
             source={item.img}
             alt="lmao"
-            style={{ width: '100%', height: 160, borderRadius: 12 }}
+            style={{
+              width: '100%',
+              height: 160,
+              borderRadius: 12,
+              resizeMode: 'contain',
+            }}
           />
         </Box>
       ))}
